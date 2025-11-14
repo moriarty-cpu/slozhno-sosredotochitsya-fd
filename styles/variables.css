@@ -5,9 +5,17 @@
   --text-color: #f1b2ce;
   --accent-color: #ff0070;
   --menu-button-color: #ff0070;
+  --section-heading-color: #ff0070;
   --decorated-border: solid 1px #ff0070;
   --decorated-border-hover: solid 1px rgba(255, 0, 122, 0.4);
   --secodary-title-color: #000028;
   --title-color: #db00ff;
   --rec: flex;
+  --title-size: clamp(6.44rem, 6.23rem + 1.02vw, 6.67rem);
+}
+
+@media (width >=768px) {
+  :root {
+    --title-size: clamp(6.667rem, 0.5rem + 14.4531vw, 8.722rem);
+  }
 }

@@ -5,6 +5,7 @@
   --accent-color: #ff8dcb;
   --menu-button-color: #353430;
   --decorated-border: solid 1px #353430;
+  --section-heading-color: #353430;
   --decorated-border-hover: solid 1px rgba(50, 49, 45, 0.4);
   --secodary-title-color: #353430;
   --title-color: #ffc2e6;
@@ -19,6 +20,7 @@
     --accent-color: #ff8dcb;
     --menu-button-color: #353430;
     --decorated-border: solid 1px #353430;
+    --section-heading-color: #353430;
     --decorated-border-hover: solid 1px rgba(50, 49, 45, 0.4);
     --secodary-title-color: #353430;
     --title-color: #ffc2e6;

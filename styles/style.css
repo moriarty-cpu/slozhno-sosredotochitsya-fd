@@ -21,6 +21,7 @@
   grid-template-rows: repeat(3, min-content);
   align-content: space-evenly;
   padding-block-start: 10px;
+  min-block-size: 648px;
 }
 
 .header__theme-menu-list {
@@ -103,7 +104,7 @@
 }
 
 .header__title {
-  font-size: clamp(6.44rem, 6.23rem + 1.02vw, 6.67rem);
+  font-size: var(--title-size);
   text-shadow: 4px 4px 0 var(--accent-color);
   color: var(--title-color);
   font-weight: bold;
@@ -112,13 +113,9 @@
 }
 
 .header__text {
-  line-height: 23.4px;
   min-block-size: 117px;
   max-inline-size: 355px;
-  font-weight: bold;
   justify-self: end;
-  color: var(--secodary-title-color);
-  background-color: var(--accent-color);
 }
 
 .content {
@@ -148,18 +145,20 @@
 }
 
 .section__heading {
-  color: var(--accent-color);
+  color: var(--section-heading-color);
   margin-block-end: 20px;
 }
 
 .content__block-item {
+  display: grid;
+  gap: 10px;
   margin-block-end: 20px;
 }
 
 .section__subheading {
   background-color: var(--accent-color);
   color: var(--secodary-title-color);
-  margin-block-end: 10px;
+  font-weight: bold;
 }
 
 .section__how-to-concentrate .section__subheading {
@@ -182,6 +181,10 @@
   object-fit: cover;
 }
 
+.gallery__heading-tablet {
+  margin-block-end: 10px;
+}
+
 .footer {
   inline-size: 100%;
   block-size: calc(100vh - var(--page-padding) * 2);
@@ -191,7 +194,7 @@
 }
 
 .footer__title {
-  font-size: clamp(6.44rem, 6.23rem + 1.02vw, 6.67rem);
+  font-size: var(--title-size);
   text-shadow: 2px 2px var(--accent-color);
   color: var(--title-color);
   font-weight: bold;
@@ -203,11 +206,6 @@
     margin-inline-start: -20px;
   }
 
-  .header__title,
-  .footer__title {
-    font-size: clamp(6.667rem, 0.5rem + 14.4531vw, 8.722rem);
-  }
-
   .page {
     --page-padding: 20px;
     padding: var(--page-padding);
@@ -217,8 +215,7 @@
     max-inline-size: 236px;
   }
 
-  .section__why-focus-hard,
-  .section__how-to-concentrate {
+  .section:not(.section__factors-affecting-attention) {
     display: grid;
     grid-template-columns: 236px minmax(472px, max-content);
     gap: 20px;
@@ -227,6 +224,10 @@
   .content {
     gap: 60px;
     padding-block: 80px;
+  }
+
+  .content__block-item {
+    grid-template-rows: repeat(2, min-content);
   }
 
   .gallery__heading-tablet {
@@ -290,8 +291,7 @@
     min-inline-size: 315px;
   }
 
-  .section__why-focus-hard,
-  .section__how-to-concentrate {
+  .section:not(.section__factors-affecting-attention) {
     grid-template-columns: 315px minmax(649px, max-content);
   }
 
